@@ -8,6 +8,8 @@ import authroutes from "../routes/authRoutes.js";
 //package-json   "type": "module"
 import { mongoURI } from "../config/dev.js";
 const app = express();
+app.use(express.json());
+
 app.use(authroutes);
 
 //error handling f/initial
