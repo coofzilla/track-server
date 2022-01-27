@@ -3,10 +3,10 @@ POST http://localhost:3000/signup
 Content-Type: application/json
 
 {
-    "email": "test4@test.com",
+    "email": "test5@test.com",
     "password":"mypassword3"
 }
 
 ###Token check
 GET http://localhost:3000/
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWYyMDRiZGJjN2I3ODFhY2E0MzUxOGQiLCJpYXQiOjE2NDMyNTA4Nzd9.83SQHbLcm_oejKIIsXsyyvl7EDB_32vpNLgCqWxrgyc
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWYyMjA1MWM4ZDc0ODgyNGQwMjc0NTEiLCJpYXQiOjE2NDMyNTc5Mzd9.6bB60cvD-kvWzb2GxVgkkS6fM5FKJnxHNdMKyB4w0gs
