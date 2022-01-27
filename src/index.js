@@ -1,13 +1,23 @@
 import express from "express";
 import mongoose from "mongoose";
 const { Schema } = mongoose;
-//rules for import ECMAScript modules
+//for import ECMAScript modules
 //extension .js
 //package-json   "type": "module"
 import { mongoURI } from "../config/dev.js";
 const app = express();
 
-mongoose.connect(mongoURI);
+const handleError = (err) => {
+  console.log("ERROR CONNECTING MONGO", err);
+};
+
+try {
+  await mongoose.connect(mongoURI);
+  console.log("CONNECTED TO MONGO");
+} catch (err) {
+  handleError(err);
+}
+mongoose.connection.on("error", (err) => handleError(err));
 
 const listingSchema = new Schema(
   {
@@ -24,7 +34,6 @@ const Listing = mongoose.model("listingsAndReviews", listingSchema);
 
 const findListing = async () => {
   const response = await Listing.findById(10006546);
-  console.log(response);
 };
 
 app.get("/", (req, res) => {
@@ -33,5 +42,4 @@ app.get("/", (req, res) => {
 
 app.listen(3000, () => {
   console.log("LISTENING ON 3000");
-  findListing();
 });
