@@ -1,12 +1,14 @@
 import express from "express";
 import mongoose from "mongoose";
 import handleError from "../utils/handleError.js";
+import authroutes from "../routes/authRoutes.js";
 
 //for import ECMAScript modules
 //extension .js
 //package-json   "type": "module"
 import { mongoURI } from "../config/dev.js";
 const app = express();
+app.use(authroutes);
 
 //error handling f/initial
 try {
