@@ -15,7 +15,8 @@ const userSchema = new Schema({
 });
 
 //can't use arrow because context of this refers to global
-userSchema.pre("save", function () {
+//Pre middleware functions are executed one after another, when each middleware calls next.
+userSchema.pre("save", function (next) {
   const user = this;
   if (!user.isModified("password")) {
     return next();
@@ -25,10 +26,10 @@ userSchema.pre("save", function () {
     if (err) return next(err);
 
     bcrypt.hash(user.password, salt, (err, hash) => {
-      return next(err);
+      if (err) return next(err);
+      user.password = hash;
+      next();
     });
-    user.password = hash;
-    next();
   });
 });
 

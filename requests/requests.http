@@ -3,8 +3,17 @@ POST http://localhost:3000/signup
 Content-Type: application/json
 
 {
-    "email": "test5@test.com",
-    "password":"mypassword3"
+    "email": "test@test.com",
+    "password":"mypassword"
+}
+
+###Sign in
+POST http://localhost:3000/signin
+Content-Type: application/json
+
+{
+    "email": "test@test.com",
+    "password":"mypassword"
 }
 
 ###Token check
