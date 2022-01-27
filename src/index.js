@@ -4,7 +4,7 @@ import handleError from "../utils/handleError.js";
 import authroutes from "../routes/authRoutes.js";
 
 //for import ECMAScript modules
-//extension .js
+//extension .js ADD TO END OF FILE PATH
 //package-json   "type": "module"
 import { mongoURI } from "../config/dev.js";
 const app = express();
