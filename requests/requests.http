@@ -1,8 +1,12 @@
-///Sign up f/app
+###Sign up f/app
 POST http://localhost:3000/signup
 Content-Type: application/json
 
 {
-    "email": "test3@test.com",
+    "email": "test4@test.com",
     "password":"mypassword3"
 }
+
+###Token check
+GET http://localhost:3000/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWYyMDRiZGJjN2I3ODFhY2E0MzUxOGQiLCJpYXQiOjE2NDMyNTA4Nzd9.83SQHbLcm_oejKIIsXsyyvl7EDB_32vpNLgCqWxrgyc

@@ -2,6 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import handleError from "../utils/handleError.js";
 import authroutes from "../routes/authRoutes.js";
+import requireAuth from "../middlewares/requireAuth.js";
 
 //for import ECMAScript modules
 //extension .js ADD TO END OF FILE PATH
@@ -22,8 +23,8 @@ try {
 //error handling after established connection
 mongoose.connection.on("error", (err) => handleError(err));
 
-app.get("/", (req, res) => {
-  res.send("Hello");
+app.get("/", requireAuth, (req, res) => {
+  res.send(`Your email: ${req.user.email}`);
 });
 
 app.listen(3000, () => {
