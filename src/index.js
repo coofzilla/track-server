@@ -2,6 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import handleError from "./utils/handleError.js";
 import authroutes from "./routes/authRoutes.js";
+import trackRoutes from "./routes/trackRoutes.js";
 import requireAuth from "./middlewares/requireAuth.js";
 
 //for import ECMAScript modules
@@ -12,6 +13,7 @@ const app = express();
 app.use(express.json());
 
 app.use(authroutes);
+app.use(trackRoutes);
 
 //error handling f/initial
 try {
