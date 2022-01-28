@@ -20,7 +20,7 @@ Content-Type: application/json
 GET http://localhost:3000/
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWYyMjA1MWM4ZDc0ODgyNGQwMjc0NTEiLCJpYXQiOjE2NDMyNTc5Mzd9.6bB60cvD-kvWzb2GxVgkkS6fM5FKJnxHNdMKyB4w0gs
 
-###Tracks
+###Get Tracks f/user
 GET http://localhost:3000/tracks
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWYyODU5YTI0NTZkODZkZWNjMTNlNDUiLCJpYXQiOjE2NDMzNTE0OTV9.72VYFqGNu8xn8l4SGHWWl-5zdCT_YfjwmcxJXVWr7EQ
 
