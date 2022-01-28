@@ -23,3 +23,25 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWYyM
 ###Tracks
 GET http://localhost:3000/tracks
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWYyODU5YTI0NTZkODZkZWNjMTNlNDUiLCJpYXQiOjE2NDMzNTE0OTV9.72VYFqGNu8xn8l4SGHWWl-5zdCT_YfjwmcxJXVWr7EQ
+
+###Create new Track
+POST http://localhost:3000/tracks
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWYyODU5YTI0NTZkODZkZWNjMTNlNDUiLCJpYXQiOjE2NDMzNTE0OTV9.72VYFqGNu8xn8l4SGHWWl-5zdCT_YfjwmcxJXVWr7EQ
+
+{
+  "name": "New track",
+  "locations": [
+    {
+      "timestamp": 100000000,
+      "coords": {
+        "latitude": 100,
+        "longitude": 100,
+        "altitude": 100,
+        "accuracy": 100,
+        "heading": 100,
+        "speed": 100
+      }
+    }
+  ]
+}
