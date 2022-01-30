@@ -29,6 +29,7 @@ app.get("/", requireAuth, (req, res) => {
   res.send(`Your email: ${req.user.email}`);
 });
 
+//ngrok http 3000 (change 3000 to match port)
 app.listen(3000, () => {
   console.log("LISTENING ON 3000");
 });
